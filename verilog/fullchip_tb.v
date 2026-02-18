@@ -365,31 +365,6 @@ $display("##### move ofifo to pmem #####");
 
 ///////////////////////////////////////////
 
-
-// /// Try to get value from core ////
-// $display("#### Try to get value from Core.v and Verify ####");
-
-//   for (q=0; q<total_cycle; q+=1) begin
-//     #0.5 clk = 1'b0;  
-//     pmem_rd = 1;
-
-//     if (q>0) begin
-//       pmem_add = pmem_add + 1;
-//     end
-    
-//     #0.5 clk = 1'b1;  
-//     expected_out = expected_out_array[q];
-//     if (expected_out == out) begin
-//       $display("Data %2d Matched :D", q);
-//     end else begin
-//       $display("Data %2d Mismatched :(", q);
-//     end
-//   end
-
-//   #0.5 clk = 1'b0;  
-//   pmem_rd = 0; pmem_add = 0; 
-//   #0.5 clk = 1'b1; 
-
   #10 $finish;
 
 
