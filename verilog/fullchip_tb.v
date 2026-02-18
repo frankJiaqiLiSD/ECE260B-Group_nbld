@@ -49,6 +49,9 @@ reg load = 0;
 reg [3:0] qkmem_add = 0;
 reg [3:0] pmem_add = 0;
 
+wire [bw_psum+3:0] sum_out;
+wire [bw_psum*col-1:0] out;
+
 
 assign inst[16] = ofifo_rd;
 assign inst[15:12] = qkmem_add;
@@ -74,7 +77,9 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .reset(reset),
       .clk(clk), 
       .mem_in(mem_in), 
-      .inst(inst)
+      .inst(inst),
+      .out(out),
+      .sum_out(sum_out)
 );
 
 
@@ -176,7 +181,6 @@ $display("##### Estimated multiplication result #####");
          temp5b = result[t][q];
          temp16b = {temp16b[139:0], temp5b};
      end
-
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
      $display("prd @cycle%2d: %40h", t, temp16b);
   end
@@ -352,6 +356,7 @@ $display("##### move ofifo to pmem #####");
     end
 
     #0.5 clk = 1'b1;  
+    $display("Output %2d: %40h", q, out);
   end
 
   #0.5 clk = 1'b0;  
@@ -361,7 +366,29 @@ $display("##### move ofifo to pmem #####");
 ///////////////////////////////////////////
 
 
+// /// Try to get value from core ////
+// $display("#### Try to get value from Core.v and Verify ####");
 
+//   for (q=0; q<total_cycle; q+=1) begin
+//     #0.5 clk = 1'b0;  
+//     pmem_rd = 1;
+
+//     if (q>0) begin
+//       pmem_add = pmem_add + 1;
+//     end
+    
+//     #0.5 clk = 1'b1;  
+//     expected_out = expected_out_array[q];
+//     if (expected_out == out) begin
+//       $display("Data %2d Matched :D", q);
+//     end else begin
+//       $display("Data %2d Mismatched :(", q);
+//     end
+//   end
+
+//   #0.5 clk = 1'b0;  
+//   pmem_rd = 0; pmem_add = 0; 
+//   #0.5 clk = 1'b1; 
 
   #10 $finish;
 

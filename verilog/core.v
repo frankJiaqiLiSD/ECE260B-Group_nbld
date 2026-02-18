@@ -97,11 +97,17 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
 
 
 
-  //////////// For printing purpose ////////////
-  always @(posedge clk) begin
-      if(pmem_wr)
-         $display("Memory write to PSUM mem add %x %x ", pmem_add, pmem_in); 
-  end
+//   //////////// For printing purpose ////////////
+//   always @(posedge clk) begin
+//       if(pmem_wr)
+//          $display("Memory write to PSUM mem add %x %x ", pmem_add, pmem_in); 
+//   end
+
+// Only for verilog verification. 
+// "out" should be normalized later
+// "sum_out" should be used in later dual-core 
+assign out = fifo_out;
+assign sum_out = fifo_out[bw_psum+3:0];
 
 
 
