@@ -1,9 +1,8 @@
-#
 #Load design
 set desdir 		"/home/linux/ieng6/ECE260B_WI26_A00/public/DESIGNdata"
 set libdir 		"/home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata"
-set design 		"add"
-set netlist 		"./netlist/$design.v"
+set design 		"core"
+set netlist     "./netlists/$design.v"
 set sdc 		"./constraints/$design.sdc"
 set best_timing_lib 	"$libdir/lib/tcbn65gplusbc.lib"
 set worst_timing_lib 	"$libdir/lib/tcbn65gpluswc.lib"
