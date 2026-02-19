@@ -11,26 +11,32 @@ output signed [bw_psum-1:0] out;
 input  signed [pr*bw-1:0] q_in;
 output signed [pr*bw-1:0] q_out;
 input  clk, reset;
-input  [1:0] i_inst; // [1]: execute, [0]: load 
-output [1:0] o_inst; // [1]: execute, [0]: load 
+input  [1:0] i_inst; 
+output [1:0] o_inst; 
 output fifo_wr;
 reg    load_ready_q;
 reg    [3:0] cnt_q;
 reg    [1:0] inst_q;
 reg    [1:0] inst_2q;
+reg    [1:0] inst_3q;
+reg    [1:0] inst_4q;
+reg    [1:0] inst_5q;
 reg   signed [pr*bw-1:0] query_q;
 reg   signed [pr*bw-1:0] key_q;
+reg   signed [bw_psum-1:0] psum_q;
 wire  signed [bw_psum-1:0] psum;
 
-assign o_inst = inst_q;
-assign fifo_wr = inst_2q[1];
+assign o_inst = inst_q; 
+assign fifo_wr = inst_5q[1]; 
 assign q_out  = query_q;
-assign out = psum;
+assign out = psum_q; 
 
 mac_16in #(.bw(bw), .bw_psum(bw_psum), .pr(pr)) mac_16in_instance (
         .a(query_q), 
         .b(key_q),
-	.out(psum)
+        .clk(clk),
+        .reset(reset),
+	      .out(psum)
 ); 
 
 
@@ -40,10 +46,17 @@ always @ (posedge clk) begin
     load_ready_q <= 1;
     inst_q <= 0;
     inst_2q <= 0;
+    inst_3q <= 0;
+    inst_4q <= 0;
+    inst_5q <= 0;
+    psum_q  <= 0;
   end
   else begin
     inst_q <= i_inst;
     inst_2q <= inst_q;
+    inst_3q <= inst_2q;
+    inst_4q <= inst_3q;
+    inst_5q <= inst_4q;
     if (inst_q[0]) begin
        query_q <= q_in;
        if (cnt_q == 9-col_id)begin
@@ -55,7 +68,7 @@ always @ (posedge clk) begin
          cnt_q <= cnt_q + 1;
     end
     else if(inst_q[1]) begin
-      //out     <= psum;
+      psum_q  <= psum;
       query_q <= q_in;
     end
   end

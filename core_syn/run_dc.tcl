@@ -1,5 +1,5 @@
 set top_module core
-set rtlPath "./netlist"
+set rtlPath "./netlists"
 
 # Target library
 set target_library /home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db 
@@ -43,9 +43,16 @@ define_design_lib WORK -path .template
 set verilogout_single_bit false
 
 # read RTL
-analyze -format verilog -lib WORK add.v
-analyze -format verilog -lib WORK csa3_2.v
-analyze -format verilog -lib WORK csa2_2.v
+analyze -format verilog -lib WORK core.v
+analyze -format verilog -lib WORK mac_array.v
+analyze -format verilog -lib WORK mac_col.v
+analyze -format verilog -lib WORK mac_16in.v
+analyze -format verilog -lib WORK ofifo.v
+analyze -format verilog -lib WORK fifo_depth16.v
+analyze -format verilog -lib WORK fifo_mux_16_1.v
+analyze -format verilog -lib WORK fifo_mux_8_1.v
+analyze -format verilog -lib WORK fifo_mux_2_1.v
+analyze -format verilog -lib WORK sram_w16.v
 
 elaborate $top_module -lib WORK -update
 current_design $top_module
@@ -54,7 +61,7 @@ current_design $top_module
 link
 
 # Default SDC Constraints
-read_sdc ${top_module}.sdc
+read_sdc constraints/${top_module}.sdc
 propagate_constraints
 
 current_design $top_module
