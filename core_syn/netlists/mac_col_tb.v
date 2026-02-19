@@ -9,7 +9,7 @@ parameter total_cycle = 8;   // how many streamed Q vectors will be processed
 parameter bw = 8;            // Q & K vector bit precision
 parameter bw_psum = 2*bw+4;  // partial sum bit precision
 parameter pr = 16;           // how many products added in each dot product 
-parameter col = 8;           // how many dot product units are equipped
+parameter col = 1;           // how many dot product units are equipped
 
 integer qk_file ; // file handler
 integer qk_scan_file ; // file handler
@@ -22,9 +22,9 @@ integer  weight [col*pr-1:0];
 
 
 
-integer  K[col-1:0][pr-1:0];
+integer  K[pr-1:0];
 integer  Q[total_cycle-1:0][pr-1:0];
-integer  result[total_cycle-1:0][col-1:0];
+integer  result[total_cycle-1:0];
 integer  sum[total_cycle-1:0];
 
 integer i,j,k,t,p,q,s,u, m;
@@ -49,9 +49,6 @@ reg load = 0;
 reg [3:0] qkmem_add = 0;
 reg [3:0] pmem_add = 0;
 
-wire [bw_psum+3:0] sum_out;
-wire [bw_psum*col-1:0] out;
-
 
 assign inst[16] = ofifo_rd;
 assign inst[15:12] = qkmem_add;
@@ -72,14 +69,11 @@ reg [bw_psum+3:0] temp_sum;
 reg [bw_psum*col-1:0] temp16b;
 
 
-
-fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
+mac_col #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) mac_col_instance (
       .reset(reset),
       .clk(clk), 
       .mem_in(mem_in), 
-      .inst(inst),
-      .out(out),
-      .sum_out(sum_out)
+      .inst(inst)
 );
 
 
@@ -104,7 +98,7 @@ $display("##### Q data txt reading #####");
   qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
 
 
-  for (q=0; q<total_cycle; q=q+1) begin
+  for (q=0; q<col; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
           qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
           Q[q][j] = captured_data;
@@ -145,13 +139,11 @@ $display("##### K data txt reading #####");
 
 
 
-  for (q=0; q<col; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
           qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
-          K[q][j] = captured_data;
+          K[j] = captured_data;
           //$display("##### %d\n", K[q][j]);
     end
-  end
 /////////////////////////////////
 
 
@@ -167,20 +159,17 @@ $display("##### K data txt reading #####");
 $display("##### Estimated multiplication result #####");
 
   for (t=0; t<total_cycle; t=t+1) begin
-     for (q=0; q<col; q=q+1) begin
-       result[t][q] = 0;
-     end
+     result[t] = 0;
   end
 
   for (t=0; t<total_cycle; t=t+1) begin
-     for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
-            result[t][q] = result[t][q] + Q[t][k] * K[q][k];
+            result[t] = result[t] + Q[t][k] * K[k];
          end
 
          temp5b = result[t][q];
          temp16b = {temp16b[139:0], temp5b};
-     end
+
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
      $display("prd @cycle%2d: %40h", t, temp16b);
   end
@@ -196,7 +185,7 @@ $display("##### Estimated multiplication result #####");
 
 $display("##### Qmem writing  #####");
 
-  for (q=0; q<total_cycle; q=q+1) begin
+  for (q=0; q<col; q=q+1) begin
 
     #0.5 clk = 1'b0;  
     qmem_wr = 1;  if (q>0) qkmem_add = qkmem_add + 1; 
@@ -315,7 +304,7 @@ $display("##### K data loading to processor #####");
 ///// execution  /////
 $display("##### execute #####");
 
-  for (q=0; q<total_cycle; q=q+1) begin
+  for (q=0; q<col; q=q+1) begin
     #0.5 clk = 1'b0;  
     execute = 1; 
     qmem_rd = 1;
@@ -346,7 +335,7 @@ $display("##### execute #####");
 
 $display("##### move ofifo to pmem #####");
 
-  for (q=0; q<total_cycle; q=q+1) begin
+  for (q=0; q<col; q=q+1) begin
     #0.5 clk = 1'b0;  
     ofifo_rd = 1; 
     pmem_wr = 1; 
@@ -365,24 +354,10 @@ $display("##### move ofifo to pmem #####");
 ///////////////////////////////////////////
 
 
-$display("##### Try to Read From pmem ####");
-  for (q=0; q<total_cycle; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    pmem_rd = 1; 
 
-    if (q>0) begin
-       pmem_add = pmem_add + 1;
-    end
 
-    #0.5 clk = 1'b1;  
-    $strobe("Output %2d: %40h", q, out); // Prints after the value had been updated. 
-  end
+  #10 $finish;
 
-  #0.5 clk = 1'b0;  
-  pmem_rd = 0; pmem_add = 0;
-  #0.5 clk = 1'b1;  
-
-#10 $finish;
 
 end
 
