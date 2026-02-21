@@ -1,20 +1,3 @@
-# Floorplan
-floorPlan -site core -r 1 0.65 5.0 5.0 5.0 5.0
-
-globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
-globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
-
-# Note, power ring is not used for the sub-module in hierarchical syn & pnr
-#addRing -spacing {top 1 bottom 1 left 1 right 1} -width {top 2 bottom 2 left 2 right 2}  -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
-
-setAddStripeMode -break_at {block_ring}
-
-### Note: Change the number of strip  by looking at the layout #########
-addStripe -number_of_sets 30  -spacing 2 -layer M4 -width 4 -nets { VSS VDD } -start_from left -start 10 -stop 730
-#################################################
-
-#addStripe -nets {VDD VSS} -layer M4 -direction vertical -width 1.8 -spacing 1.8 -number_of_sets 5 -start_from left -start 80 -stop 180 
-
-sroute
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:0455fb4a3ec4994a7d158fcc351e34eaec960b049fb99974c104d90df35b98fb
+size 1103

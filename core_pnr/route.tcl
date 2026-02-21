@@ -1,25 +1,3 @@
-# Routing
-setNanoRouteMode -quiet -drouteAllowMergedWireAtPin false
-setNanoRouteMode -quiet -drouteFixAntenna true
-setNanoRouteMode -quiet -routeWithTimingDriven true
-setNanoRouteMode -quiet -routeWithSiDriven true
-setNanoRouteMode -quiet -routeSiEffort medium
-setNanoRouteMode -quiet -routeWithSiPostRouteFix false
-setNanoRouteMode -quiet -drouteAutoStop true
-setNanoRouteMode -quiet -routeSelectedNetOnly false
-setNanoRouteMode -quiet -drouteStartIteration default
-routeDesign
-
-# RC extraction for optimization
-setExtractRCMode -engine postRoute
-extractRC
-
-# Post-route timing optimization
-setAnalysisMode -analysisType onChipVariation -cppr both
-optDesign -postRoute -setup -hold
-
-# Fix DRC errors
-optDesign -postRoute -drv
-optDesign -postRoute -inc
-
-saveDesign route.enc
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa364fc1ee7aa16b9cdf043c2509c9a443f34ef0f5b8c5b353acac712d7a1e1d
+size 795

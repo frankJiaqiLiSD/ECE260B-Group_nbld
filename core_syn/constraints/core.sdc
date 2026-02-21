@@ -1,13 +1,3 @@
-set clock_cycle 1.0 
-set io_delay 0.2 
-
-set clock_port clk
-
-create_clock -name clk -period $clock_cycle [get_ports $clock_port]
-
-set_input_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports mem_in]
-set_input_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports inst]
-set_input_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports reset]
-
-set_output_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports out]
-set_output_delay -clock [get_clocks clk] -add_delay -max $io_delay [get_ports sum_out]
+version https://git-lfs.github.com/spec/v1
+oid sha256:e39c9f84b0e6530d0decaacfe0ed368abe75b4d20e8c0732251f81a59f1d8b02
+size 593
