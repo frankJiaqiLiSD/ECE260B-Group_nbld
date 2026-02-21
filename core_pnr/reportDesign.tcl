@@ -1,14 +1,3 @@
-
-
-verifyGeometry
-verifyConnectivity
-
-# Timing report
-report_timing -max_paths 5 > ${design}.post_route.timing.rpt
-
-# Power report
-report_power -outfile ${design}.post_route.power.rpt
-
-# Design report
-summaryReport -nohtml -outfile ${design}.post_route.summary.rpt
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b42ff8bd805280c558990bc557e026034f51546828545a12841185a73df08be
+size 284

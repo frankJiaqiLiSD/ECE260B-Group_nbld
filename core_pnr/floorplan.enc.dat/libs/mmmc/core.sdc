@@ -1,0 +1,1 @@
+/home/linux/ieng6/oce/7f/jil547/Desktop/ECE260B-Group_nbld/core_pnr/constraints/core.sdc

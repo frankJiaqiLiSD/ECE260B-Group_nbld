@@ -1,19 +1,3 @@
-// Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
-// Please do not spread this code without permission 
-module sync(clk, in, out);
-
-input  in; 
-input  clk;
-output out;
-
-reg    int1; 
-reg    int2; 
-
-assign out = int2;
-
-always @ (posedge clk) begin
-   int1 <= in;
-   int2 <= int1;
-end
-
-endmodule
+version https://git-lfs.github.com/spec/v1
+oid sha256:75b7cf060885cd8c040e8d43e28464f019fa679f17c85282c47475dd2e8928fa
+size 308

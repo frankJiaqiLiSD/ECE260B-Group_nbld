@@ -1,14 +1,3 @@
-./verilog/fullchip_tb.v
-./verilog/fullchip.v
-./verilog/core.v
-./verilog/sync.v
-./verilog/sfp_row.v
-./verilog/mac_col.v
-./verilog/mac_16in.v
-./verilog/mac_array.v
-./verilog/sram_w16.v
-./verilog/ofifo.v
-./verilog/fifo_depth16.v
-./verilog/fifo_mux_16_1.v
-./verilog/fifo_mux_8_1.v
-./verilog/fifo_mux_2_1.v
+version https://git-lfs.github.com/spec/v1
+oid sha256:48574a8cf3908e198de6583659844b77209535bf37a9f2254bc29c406a8cca9e
+size 328
