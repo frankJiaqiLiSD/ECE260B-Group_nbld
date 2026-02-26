@@ -1,4 +1,5 @@
-set clock_cycle 1.0 
+# For now, allow 3 cycles to process. Need to implement the pipeline
+set clock_cycle 1.0
 set io_delay 0.2 
 
 set clock_port clk

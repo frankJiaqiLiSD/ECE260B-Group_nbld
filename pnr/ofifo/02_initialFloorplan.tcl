@@ -1,5 +1,5 @@
 # Floorplan
-floorPlan -site core -r 1 0.70 10.0 10.0 10.0 10.0
+floorPlan -site core -r 0.4 0.70 10.0 10.0 10.0 10.0
 #createPlaceBlockage -box [list x1 y2 x2 y2]
 
 globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
@@ -10,10 +10,17 @@ addRing -spacing {top 1 bottom 1 left 1 right 1} -width {top 2 bottom 2 left 2 r
 
 
 # Power stripes
+set coreBox [lindex [dbGet top.fPlan.coreBox] 0]
+set x1 [lindex $coreBox 0]
+set y1 [lindex $coreBox 1]
+set x2 [lindex $coreBox 2]
+set y2 [lindex $coreBox 3]
+set num_sets 16
+set stripe_padding [expr {($x2 - $x1) / ($num_sets + 2)}]
 setAddStripeMode -break_at {block_ring}
 addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit M1 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit M1 -skip_via_on_pin Standardcell -stacked_via_top_layer M8 -padcore_ring_top_layer_limit M1 -block_ring_bottom_layer_limit M1 -stacked_via_bottom_layer M1 \
-    -number_of_sets 5 -spacing 0.4 -merge_stripes_value 0.1 -direction horizontal -layer M3 -width 1 -area {} -nets {VDD VSS}
-
+    -number_of_sets $num_sets -spacing 0.4 -merge_stripes_value 0.1 -direction vertical -layer M4 -width 1 -nets {VDD VSS} \
+    -area "[expr {$x1 + $stripe_padding}] $y1 [expr {$x2 - $stripe_padding}] $y2"
 #################################################
 
 #addStripe -nets {VDD VSS} -layer M4 -direction vertical -width 1.8 -spacing 1.8 -number_of_sets 5 -start_from left -start 80 -stop 180 

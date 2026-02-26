@@ -24,3 +24,6 @@ optDesign -postRoute -drv
 optDesign -postRoute -inc
 
 saveDesign route.enc
+
+verify_connectivity
+verify_drc

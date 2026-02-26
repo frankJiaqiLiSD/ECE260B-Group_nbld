@@ -1,3 +1,6 @@
+# Dummy floorplan to reset canvas
+floorPlan -site core -r 1 1 0 0 0 0 
+
 # Floorplan
 floorPlan -site core -r 1 0.70 10.0 10.0 10.0 10.0
 #createPlaceBlockage -box [list x1 y2 x2 y2]
@@ -6,13 +9,24 @@ globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
 globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
 
 # Power ring
-addRing -spacing {top 1 bottom 1 left 1 right 1} -width {top 2 bottom 2 left 2 right 2}  -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
+# Power ring
+set power_ring_width 5
+set power_ring_spacing 2
+addRing -spacing {top power_ring_spacing bottom power_ring_spacing left power_ring_spacing right power_ring_spacing} -width {top power_ring_width bottom power_ring_width left power_ring_width right power_ring_width}  -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
 
 
 # Power stripes
+set coreBox [lindex [dbGet top.fPlan.coreBox] 0]
+set x1 [lindex $coreBox 0]
+set y1 [lindex $coreBox 1]
+set x2 [lindex $coreBox 2]
+set y2 [lindex $coreBox 3]
+set num_sets 4
+set stripe_padding [expr {($x2 - $x1) / ($num_sets + 2)}]
 setAddStripeMode -break_at {block_ring}
 addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit M1 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit M1 -skip_via_on_pin Standardcell -stacked_via_top_layer M8 -padcore_ring_top_layer_limit M1 -block_ring_bottom_layer_limit M1 -stacked_via_bottom_layer M1 \
-    -number_of_sets 5 -spacing 0.4 -merge_stripes_value 0.1 -direction horizontal -layer M5 -width 1 -area {} -nets {VDD VSS}
+    -number_of_sets $num_sets -spacing 0.4 -merge_stripes_value 0.1 -direction vertical -layer M4 -width 1 -nets {VDD VSS} \
+    -area "[expr {$x1 + $stripe_padding}] $y1 [expr {$x2 - $stripe_padding}] $y2"
 
 #################################################
 

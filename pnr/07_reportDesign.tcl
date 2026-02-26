@@ -1,6 +1,3 @@
-verify_connectivity
-verify_drc
-
 # Timing report
 report_timing -max_paths 5 > ${design}.post_route.timing.rpt
 
