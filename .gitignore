@@ -25,3 +25,7 @@ pnr/*/innovus.log*
 pnr/*/innovus.logv*
 pnr/*/innovus.cmd*
 pnr/*/timingReports
+pnr/*/.core*
+pnr/*/.nfs*
+pnr/*/.timing*
+*ipynb

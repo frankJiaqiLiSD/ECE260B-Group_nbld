@@ -48,6 +48,8 @@ assign pmem_wr = inst[0];
 assign mac_in  = inst[6] ? kmem_out : qmem_out;
 assign pmem_in = fifo_out;
 
+assign out = pmem_out;
+
 mac_array #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) mac_array_instance (
         .in(mac_in), 
         .clk(clk), 
@@ -95,7 +97,11 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
         .A(pmem_add)
 );
 
-
+//sfp_row #(.bw(bw), .bw_psum(bw_psum), .col(col)) sfp_instance (
+//        .clk(clk),
+//        .sfp_in(pmem_out),
+//        .sfp_out(sfp_out)
+//);
 
   //////////// For printing purpose ////////////
   always @(posedge clk) begin

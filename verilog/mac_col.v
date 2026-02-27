@@ -14,6 +14,7 @@ input  clk, reset;
 input  [1:0] i_inst; // [1]: execute, [0]: load 
 output [1:0] o_inst; // [1]: execute, [0]: load 
 output fifo_wr;
+
 reg    load_ready_q;
 reg    [3:0] cnt_q;
 reg    [1:0] inst_q;
@@ -46,7 +47,7 @@ always @ (posedge clk) begin
     inst_2q <= inst_q;
     if (inst_q[0]) begin
        query_q <= q_in;
-       if (cnt_q == 9-col_id)begin
+       if (cnt_q == 8-col_id)begin
          cnt_q <= 0;
          key_q <= q_in;
          load_ready_q <= 0;

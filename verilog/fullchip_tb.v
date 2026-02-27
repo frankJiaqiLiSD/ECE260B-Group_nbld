@@ -27,7 +27,7 @@ integer  Q[total_cycle-1:0][pr-1:0];
 integer  result[total_cycle-1:0][col-1:0];
 integer  sum[total_cycle-1:0];
 
-integer i,j,k,t,p,q,s,u, m;
+integer i,j,k,t,p,q,s,u,m;
 
 
 
@@ -36,6 +36,7 @@ integer i,j,k,t,p,q,s,u, m;
 reg reset = 1;
 reg clk = 0;
 reg [pr*bw-1:0] mem_in; 
+wire [bw_psum*col-1:0] mem_out; 
 reg ofifo_rd = 0;
 wire [16:0] inst; 
 reg qmem_rd = 0;
@@ -74,8 +75,20 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .reset(reset),
       .clk(clk), 
       .mem_in(mem_in), 
-      .inst(inst)
+      .inst(inst),
+      .out(mem_out)
 );
+
+  task tick;
+    input [31:0] num_cycles;
+    integer tick_counter;
+    begin
+      for (tick_counter=0; tick_counter<num_cycles; tick_counter=tick_counter+1) begin
+        #0.5 clk = 1'b1;
+        #0.5 clk = 1'b0;
+      end
+    end
+  endtask
 
 
 initial begin 
@@ -83,87 +96,41 @@ initial begin
   $dumpfile("fullchip_tb.vcd");
   $dumpvars(0,fullchip_tb);
 
-
-
+/* Each row in the file corresponds to a column of the matrix, Q₁, Q₂, ... */
 ///// Q data txt reading /////
-
-$display("##### Q data txt reading #####");
-
-
-  qk_file = $fopen("qdata.txt", "r");
-
-  //// To get rid of first 3 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-
-
+  $display("##### Q data txt reading #####");
+  qk_file = $fopen("q.txt", "r");
   for (q=0; q<total_cycle; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
           qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
           Q[q][j] = captured_data;
-          //$display("%d\n", K[q][j]);
     end
   end
 /////////////////////////////////
 
 
-
-
-  for (q=0; q<2; q=q+1) begin
-    #0.5 clk = 1'b0;   
-    #0.5 clk = 1'b1;   
-  end
-
-
-
-
 ///// K data txt reading /////
-
-$display("##### K data txt reading #####");
-
-  for (q=0; q<10; q=q+1) begin
-    #0.5 clk = 1'b0;   
-    #0.5 clk = 1'b1;   
-  end
+  $display("##### K data txt reading #####");
+  tick(12);
   reset = 0;
-
-  qk_file = $fopen("kdata.txt", "r");
-
-  //// To get rid of first 4 lines in data file ////
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-
-
-
-
+  qk_file = $fopen("k.txt", "r");
   for (q=0; q<col; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
           qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
           K[q][j] = captured_data;
-          //$display("##### %d\n", K[q][j]);
     end
   end
 /////////////////////////////////
-
-
-
 
 
 
 
 
 /////////////// Estimated result printing /////////////////
-
-
-$display("##### Estimated multiplication result #####");
-
+  $display("##### Estimated multiplication result #####");
   for (t=0; t<total_cycle; t=t+1) begin
      for (q=0; q<col; q=q+1) begin
-       result[t][q] = 0;
+       result[t][q] = 0; // zero-out memory to save
      end
   end
 
@@ -171,16 +138,17 @@ $display("##### Estimated multiplication result #####");
      for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
             result[t][q] = result[t][q] + Q[t][k] * K[q][k];
+//            $display("  Expected result for row(q) #%1d, col(k) #%1d : %1d", q, t, result[t][q]);
          end
 
-         temp5b = result[t][q];
-         temp16b = {temp16b[139:0], temp5b};
+//         temp5b = result[t][q];
+//         temp16b = {temp16b[139:0], temp5b};
+         #0.1;
      end
 
      //$display("%d %d %d %d %d %d %d %d", result[t][0], result[t][1], result[t][2], result[t][3], result[t][4], result[t][5], result[t][6], result[t][7]);
-     $display("prd @cycle%2d: %40h", t, temp16b);
+//     $display("prd @cycle%2d: %40h", t, temp16b);
   end
-
 //////////////////////////////////////////////
 
 
@@ -189,14 +157,10 @@ $display("##### Estimated multiplication result #####");
 
 
 ///// Qmem writing  /////
-
-$display("##### Qmem writing  #####");
-
+  $display("##### Qmem writing  #####");
+  qkmem_add = 0;
+  qmem_wr = 1;
   for (q=0; q<total_cycle; q=q+1) begin
-
-    #0.5 clk = 1'b0;  
-    qmem_wr = 1;  if (q>0) qkmem_add = qkmem_add + 1; 
-    
     mem_in[1*bw-1:0*bw] = Q[q][0];
     mem_in[2*bw-1:1*bw] = Q[q][1];
     mem_in[3*bw-1:2*bw] = Q[q][2];
@@ -214,15 +178,11 @@ $display("##### Qmem writing  #####");
     mem_in[15*bw-1:14*bw] = Q[q][14];
     mem_in[16*bw-1:15*bw] = Q[q][15];
 
-    #0.5 clk = 1'b1;  
-
+    tick(1);
+    qkmem_add = qkmem_add + 1; 
   end
-
-
-  #0.5 clk = 1'b0;  
   qmem_wr = 0; 
-  qkmem_add = 0;
-  #0.5 clk = 1'b1;  
+  tick(4);
 ///////////////////////////////////////////
 
 
@@ -230,24 +190,20 @@ $display("##### Qmem writing  #####");
 
 
 ///// Kmem writing  /////
-
-$display("##### Kmem writing #####");
-
+  $display("##### Kmem writing #####");
+  qkmem_add = 0;
+  kmem_wr = 1;    
   for (q=0; q<col; q=q+1) begin
-
-    #0.5 clk = 1'b0;  
-    kmem_wr = 1; if (q>0) qkmem_add = qkmem_add + 1; 
-    
-    mem_in[1*bw-1:0*bw] = K[q][0];
-    mem_in[2*bw-1:1*bw] = K[q][1];
-    mem_in[3*bw-1:2*bw] = K[q][2];
-    mem_in[4*bw-1:3*bw] = K[q][3];
-    mem_in[5*bw-1:4*bw] = K[q][4];
-    mem_in[6*bw-1:5*bw] = K[q][5];
-    mem_in[7*bw-1:6*bw] = K[q][6];
-    mem_in[8*bw-1:7*bw] = K[q][7];
-    mem_in[9*bw-1:8*bw] = K[q][8];
-    mem_in[10*bw-1:9*bw] = K[q][9];
+    mem_in[ 1*bw-1 :0*bw] = K[q][0];
+    mem_in[ 2*bw-1: 1*bw] = K[q][1];
+    mem_in[ 3*bw-1: 2*bw] = K[q][2];
+    mem_in[ 4*bw-1: 3*bw] = K[q][3];
+    mem_in[ 5*bw-1: 4*bw] = K[q][4];
+    mem_in[ 6*bw-1: 5*bw] = K[q][5];
+    mem_in[ 7*bw-1: 6*bw] = K[q][6];
+    mem_in[ 8*bw-1: 7*bw] = K[q][7];
+    mem_in[ 9*bw-1: 8*bw] = K[q][8];
+    mem_in[10*bw-1: 9*bw] = K[q][9];
     mem_in[11*bw-1:10*bw] = K[q][10];
     mem_in[12*bw-1:11*bw] = K[q][11];
     mem_in[13*bw-1:12*bw] = K[q][12];
@@ -255,118 +211,108 @@ $display("##### Kmem writing #####");
     mem_in[15*bw-1:14*bw] = K[q][14];
     mem_in[16*bw-1:15*bw] = K[q][15];
 
-    #0.5 clk = 1'b1;  
-
+    tick(1);
+    qkmem_add = qkmem_add + 1; 
   end
-
-  #0.5 clk = 1'b0;  
   kmem_wr = 0;  
-  qkmem_add = 0;
-  #0.5 clk = 1'b1;  
+  tick(4);
 ///////////////////////////////////////////
 
 
-
-  for (q=0; q<2; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    #0.5 clk = 1'b1;   
-  end
 
 
 
 
 /////  K data loading  /////
-$display("##### K data loading to processor #####");
-
+  $display("##### K data loading to processor #####");
+  qkmem_add = 0;
   for (q=0; q<col+1; q=q+1) begin
-    #0.5 clk = 1'b0;  
     load = 1; 
     if (q==1) kmem_rd = 1;
     if (q>1) begin
        qkmem_add = qkmem_add + 1;
     end
-
-    #0.5 clk = 1'b1;  
+    tick(1);
   end
 
-  #0.5 clk = 1'b0;  
-  kmem_rd = 0; qkmem_add = 0;
-  #0.5 clk = 1'b1;  
-
-  #0.5 clk = 1'b0;  
+  kmem_rd = 0;
+  tick(1);
   load = 0; 
-  #0.5 clk = 1'b1;  
-
+  tick(10);
 ///////////////////////////////////////////
 
- for (q=0; q<10; q=q+1) begin
-    #0.5 clk = 1'b0;   
-    #0.5 clk = 1'b1;   
- end
 
 
 
 
 
 ///// execution  /////
-$display("##### execute #####");
-
+  qkmem_add = 0;
+  execute = 1; 
+  qmem_rd = 1;
+  $display("##### execute #####");
   for (q=0; q<total_cycle; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    execute = 1; 
-    qmem_rd = 1;
 
-    if (q>0) begin
-       qkmem_add = qkmem_add + 1;
-    end
-
-    #0.5 clk = 1'b1;  
+    tick(1);
+    qkmem_add = qkmem_add + 1;
   end
 
-  #0.5 clk = 1'b0;  
   qmem_rd = 0; qkmem_add = 0; execute = 0;
-  #0.5 clk = 1'b1;  
-
-
+  tick(10);
 ///////////////////////////////////////////
 
- for (q=0; q<10; q=q+1) begin
-    #0.5 clk = 1'b0;   
-    #0.5 clk = 1'b1;   
- end
 
 
 
 
 ////////////// output fifo rd and wb to psum mem ///////////////////
-
-$display("##### move ofifo to pmem #####");
-
+  $display("##### move ofifo to pmem #####");
+  ofifo_rd = 1; 
+  pmem_wr = 1; 
   for (q=0; q<total_cycle; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    ofifo_rd = 1; 
-    pmem_wr = 1; 
+    tick(1);
+    pmem_add = pmem_add + 1;
 
-    if (q>0) begin
-       pmem_add = pmem_add + 1;
-    end
-
-    #0.5 clk = 1'b1;  
   end
 
-  #0.5 clk = 1'b0;  
-  pmem_wr = 0; pmem_add = 0; ofifo_rd = 0;
-  #0.5 clk = 1'b1;  
-
+  pmem_wr = 0; ofifo_rd = 0;
+  tick(10);
 ///////////////////////////////////////////
 
 
+///////////// Read from PMEM and verify results //////////
+  $display("##### Reading from pmem #####");
+  pmem_rd = 1;
+  pmem_add = 0;
+  tests_fail = 0;
+  for (t=0; t<total_cycle; t=t+1) begin
+    tick(1);
+    pmem_add = pmem_add + 1;
+
+    $write("Checking cycle %0d's values: ", t);
+    for (q=0; q<col; q=q+1) begin
+      expected = result[t][col-q-1];
+      actual = $signed(mem_out[bw_psum*q +: bw_psum]);
+      if (expected == actual) $write("%0d=%0d, ", expected, actual);
+      else begin
+        $write("\033[31m%0d≠%0d\033[0m, ", expected, actual);
+        tests_fail = tests_fail + 1;
+      end
+    end
+    $write("\n");
+  end
+  pmem_rd = 0;
+  if (tests_fail == 0)
+    $display("\n[\033[32mPASS\033[0m] All %0d products match their expected values.", total_cycle*col);
+  else
+    $display("\n[\033[31mFAIL\033[0m] %0d of %0d products did not match their expected values.", tests_fail, total_cycle*col);
 
 
   #10 $finish;
 
 
 end
+  integer expected, actual, tests_fail;
 
 endmodule
 
