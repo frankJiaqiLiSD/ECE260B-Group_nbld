@@ -1,1 +1,0 @@
-/home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/hier_syn/syn_core/core.sdc
