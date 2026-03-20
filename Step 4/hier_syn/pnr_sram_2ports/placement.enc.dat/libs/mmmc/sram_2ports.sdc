@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:160e986ec54225758f11a549deeff51d12bb8ecb858742afb46d9a23502d46e8
-size 287
+/home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/hier_syn/syn_sram_2ports/sram_2ports.sdc
