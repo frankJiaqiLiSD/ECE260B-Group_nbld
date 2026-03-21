@@ -8,7 +8,7 @@ setNanoRouteMode -quiet -routeWithSiPostRouteFix false
 setNanoRouteMode -quiet -drouteAutoStop true
 setNanoRouteMode -quiet -routeSelectedNetOnly false
 setNanoRouteMode -quiet -drouteStartIteration default
-setNanoRouteMode -quiet -routeTopRoutingLayer 4
+setNanoRouteMode -quiet -routeTopRoutingLayer 6
 routeDesign
 
 # RC extraction for optimization

@@ -4,7 +4,7 @@ module mac_col (clk, reset, out, q_in, q_out, i_inst, fifo_wr, o_inst);
 
 parameter bw = 8;
 parameter bw_psum = 2*bw+6;
-parameter pr = 8;
+parameter pr = 16;
 parameter col_id = 0;
 
 output signed [bw_psum-1:0] out;
@@ -17,20 +17,20 @@ output fifo_wr;
 
 reg    load_ready_q;
 reg    [3:0] cnt_q;
-reg    [1:0] inst_q;
-reg    [1:0] inst_2q;
+reg    [1:0] inst_q, inst_qq, inst_qqq, inst_qqqq, inst_qqqqq;
 reg   signed [pr*bw-1:0] query_q;
 reg   signed [pr*bw-1:0] key_q;
 wire  signed [bw_psum-1:0] psum;
 
 assign o_inst = inst_q;
-assign fifo_wr = inst_2q[1];
+assign fifo_wr = inst_qqqqq[1];
 assign q_out  = query_q;
 assign out = psum;
 
 mac_16in #(.bw(bw), .bw_psum(bw_psum), .pr(pr)) mac_16in_instance (
-        .a(query_q), 
-        .b(key_q),
+  .clk(clk),
+  .a(query_q), 
+  .b(key_q),
 	.out(psum)
 ); 
 
@@ -40,11 +40,17 @@ always @ (posedge clk) begin
     cnt_q <= 0;
     load_ready_q <= 1;
     inst_q <= 0;
-    inst_2q <= 0;
+    inst_qq <= 0;
+    inst_qqq <= 0;
+    inst_qqqq <= 0;
+    inst_qqqqq <= 0;
   end
   else begin
     inst_q <= i_inst;
-    inst_2q <= inst_q;
+    inst_qq <= inst_q;
+    inst_qqq <= inst_qq;
+    inst_qqqq <= inst_qqq;
+    inst_qqqqq <= inst_qqqq;
     if (inst_q[0]) begin
        query_q <= q_in;
        if (cnt_q == 8-col_id)begin

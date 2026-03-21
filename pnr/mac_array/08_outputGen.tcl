@@ -1,4 +1,4 @@
-streamOut ${design}.gds2
+streamOut ${design}.gds2 -merge {../mac_col/mac_col.gds2}
 write_lef_abstract ${design}.lef -stripePin -PGPinLayers {4} -extractBlockPGPinLayers {4} -specifyTopLayer 4
 defOut -netlist -routing ${design}.def
 saveNetlist ${design}.pnr.v

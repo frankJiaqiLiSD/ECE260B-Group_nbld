@@ -2,7 +2,7 @@
 floorPlan -site core -r 1 1 0 0 0 0 
 
 # Floorplan
-floorPlan -site core -r 1.5 0.50 15.0 15.0 15.0 15.0
+floorPlan -site core -r 1 0.60 15.0 15.0 15.0 15.0
 
 
 
@@ -27,11 +27,11 @@ addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit M1 -max_sa
     -area "[expr {$x1}] [expr {$y1 + $stripe_padding}] [expr {$x2}] [expr {$y2 - $stripe_padding}]"
 
 
-setObjFPlanBox Instance qmem_instance 60 940 600 1080
-setObjFPlanBox Instance kmem_instance 60 840 600 930
-setObjFPlanBox Instance mac_array_instance 140 420 450 740
-setObjFPlanBox Instance ofifo_inst 55 150 600 330
-setObjFPlanBox Instance psum_mem_instance 60 30 600 110
+placeInstance qmem_instance 60 360 R270
+placeInstance kmem_instance 160 360 R270
+placeInstance mac_array_instance 280 320
+placeInstance ofifo_inst 400 150
+placeInstance psum_mem_instance 360 30
 
 addHaloToBlock {3 3 3 3} qmem_instance
 addHaloToBlock {3 3 3 3} kmem_instance

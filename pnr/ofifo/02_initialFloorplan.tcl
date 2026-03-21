@@ -1,5 +1,5 @@
 # Floorplan
-floorPlan -site core -r 0.4 0.70 10.0 10.0 10.0 10.0
+floorPlan -site core -r 0.25 0.65 10.0 10.0 10.0 10.0
 #createPlaceBlockage -box [list x1 y2 x2 y2]
 
 globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose

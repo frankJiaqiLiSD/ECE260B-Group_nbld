@@ -29,3 +29,4 @@ pnr/*/.core*
 pnr/*/.nfs*
 pnr/*/.timing*
 *ipynb
+pnr/*/scheduling_file.cts*

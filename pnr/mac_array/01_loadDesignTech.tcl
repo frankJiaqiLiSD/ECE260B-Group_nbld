@@ -21,11 +21,11 @@ set init_verilog "$netlist"
 set init_design_netlisttype "Verilog"
 set init_design_settop 1
 set init_top_cell "$design"
-set init_lef_file "$lef"
+set init_lef_file "$lef ../mac_col/mac_col.lef"
 
 # MCMM setup
-create_library_set -name WC_LIB -timing "$worst_timing_lib"
-create_library_set -name BC_LIB -timing "$best_timing_lib"
+create_library_set -name WC_LIB -timing "$worst_timing_lib ../mac_col/mac_col_WC.lib"
+create_library_set -name BC_LIB -timing "$best_timing_lib ../mac_col/mac_col_BC.lib"
 create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
 create_rc_corner -name Cmin -cap_table $best_captbl -T -40
 create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax

@@ -2,7 +2,7 @@
 // Please do not spread this code without permission 
 module ofifo (clk, in, out, rd, wr, o_valid, reset, o_full);
 
-  parameter col  = 16;
+  parameter col  = 8;
   parameter simd = 1;
   parameter bw = 24;
 

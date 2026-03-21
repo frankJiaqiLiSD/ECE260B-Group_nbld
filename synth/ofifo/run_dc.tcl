@@ -27,4 +27,4 @@ propagate_constraints
 current_design $top_module
 
 # Run the synthesis and save results
-source "../run.tcl"
+source "../run_flat.tcl"
