@@ -1,0 +1,182 @@
+ 
+****************************************
+Report : area
+Design : sfp_row
+Version: K-2015.06-SP2
+Date   : Thu Mar 19 04:28:11 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'sfp_row' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db)
+
+Number of ports:                        20086
+Number of nets:                         43425
+Number of cells:                        24421
+Number of combinational cells:          19152
+Number of sequential cells:              5059
+Number of macros/black boxes:               0
+Number of buf/inv:                       2084
+Number of references:                      65
+
+Combinational area:              48364.560878
+Buf/Inv area:                     2302.200091
+Noncombinational area:           30425.760336
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 78790.321214
+Total area:                 undefined
+1
+ 
+****************************************
+Report : reference
+Design : sfp_row
+Version: K-2015.06-SP2
+Date   : Thu Mar 19 04:28:12 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AN2D0              tcbn65gpluswc
+                                  2.160000       2      4.320000  
+AO21D0             tcbn65gpluswc
+                                  2.520000      60    151.199999  
+AO21D1             tcbn65gpluswc
+                                  2.520000       4     10.080000  
+AOI21D0            tcbn65gpluswc
+                                  2.160000     540   1166.400046  
+AOI21D1            tcbn65gpluswc
+                                  2.160000      22     47.520002  
+AOI22D0            tcbn65gpluswc
+                                  2.520000      31     78.119999  
+AOI22D1            tcbn65gpluswc
+                                  2.520000       2      5.040000  
+BUFFD1             tcbn65gpluswc
+                                  1.440000       2      2.880000  
+BUFFD2             tcbn65gpluswc
+                                  2.160000       2      4.320000  
+CKAN2D0            tcbn65gpluswc
+                                  2.160000     313    676.080027  
+CKBD1              tcbn65gpluswc
+                                  1.440000       2      2.880000  
+CKND2              tcbn65gpluswc
+                                  1.440000       4      5.760000  
+CKND2D0            tcbn65gpluswc
+                                  1.440000    2759   3972.960158  
+CKND2D1            tcbn65gpluswc
+                                  1.440000      26     37.440001  
+CKND2D2            tcbn65gpluswc
+                                  2.520000       5     12.600000  
+CKND3              tcbn65gpluswc
+                                  2.160000       2      4.320000  
+CKND8              tcbn65gpluswc
+                                  4.320000       1      4.320000  
+CKXOR2D0           tcbn65gpluswc
+                                  3.600000     502   1807.199952  
+CMPE42D1           tcbn65gpluswc
+                                 16.559999      57    943.919970  r
+DFQD1              tcbn65gpluswc
+                                  6.840000      15    102.600002  n
+EDFQD1             tcbn65gpluswc
+                                  9.360000     564   5279.039806  n
+FA1D0              tcbn65gpluswc
+                                  9.000000     340   3060.000000  r
+FICIND1            tcbn65gpluswc
+                                 10.440000      10    104.399996  r
+IAO21D0            tcbn65gpluswc
+                                  2.520000       2      5.040000  
+IND2D0             tcbn65gpluswc
+                                  2.160000       8     17.280001  
+INR2D0             tcbn65gpluswc
+                                  2.160000     228    492.480020  
+INR3D0             tcbn65gpluswc
+                                  2.520000      10     25.200000  
+INVD0              tcbn65gpluswc
+                                  1.080000    1798   1941.840077  
+INVD1              tcbn65gpluswc
+                                  1.080000       9      9.720000  
+INVD2              tcbn65gpluswc
+                                  1.440000       6      8.640000  
+INVD3              tcbn65gpluswc
+                                  2.160000       2      4.320000  
+IOA21D0            tcbn65gpluswc
+                                  2.520000       3      7.560000  
+MAOI222D0          tcbn65gpluswc
+                                  2.880000       1      2.880000  
+MUX2D0             tcbn65gpluswc
+                                  3.240000    1216   3939.840012  
+MUX2ND0            tcbn65gpluswc
+                                  2.880000     122    351.360014  
+ND2D0              tcbn65gpluswc
+                                  1.440000       1      1.440000  
+ND2D1              tcbn65gpluswc
+                                  1.440000      35     50.400002  
+ND2D2              tcbn65gpluswc
+                                  2.520000       6     15.120000  
+ND3D0              tcbn65gpluswc
+                                  2.160000      17     36.720001  
+ND4D0              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+NR2D0              tcbn65gpluswc
+                                  1.440000    1593   2293.920091  
+NR2D1              tcbn65gpluswc
+                                  1.440000       1      1.440000  
+NR2D2              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+NR2XD0             tcbn65gpluswc
+                                  1.440000       3      4.320000  
+NR2XD1             tcbn65gpluswc
+                                  2.520000       3      7.560000  
+NR2XD2             tcbn65gpluswc
+                                  4.320000       2      8.640000  
+NR3D0              tcbn65gpluswc
+                                  2.160000       8     17.280001  
+NR4D0              tcbn65gpluswc
+                                  2.520000      10     25.200000  
+OA21D0             tcbn65gpluswc
+                                  2.520000       8     20.160000  
+OA22D0             tcbn65gpluswc
+                                  2.880000       8     23.040001  
+OA211D0            tcbn65gpluswc
+                                  2.880000       1      2.880000  
+OAI21D0            tcbn65gpluswc
+                                  2.160000     836   1805.760072  
+OAI21D1            tcbn65gpluswc
+                                  2.160000      25     54.000002  
+OAI22D0            tcbn65gpluswc
+                                  2.520000     125    314.999998  
+OAI22D1            tcbn65gpluswc
+                                  2.520000       3      7.560000  
+OAI31D1            tcbn65gpluswc
+                                  2.520000      24     60.480000  
+OR2D0              tcbn65gpluswc
+                                  2.160000     256    552.960022  
+TIEL               tcbn65gpluswc
+                                  1.080000       1      1.080000  
+XNR2D0             tcbn65gpluswc
+                                  3.600000     581   2091.599945  
+XOR2D0             tcbn65gpluswc
+                                  3.600000       1      3.600000  
+XOR3D0             tcbn65gpluswc
+                                  6.120000       9     55.079999  
+fifo_depth16_bw24_0            3695.040079       1   3695.040079  h, n
+fifo_depth16_bw24_1            5138.280107       1   5138.280107  h, n
+fifo_depth16_bw24_2            3693.960079       1   3693.960079  h, n
+ofifo_col8_bw20               34513.200732       1  34513.200732  h, n
+-----------------------------------------------------------------------------
+Total 65 references                                 78790.321214
+1

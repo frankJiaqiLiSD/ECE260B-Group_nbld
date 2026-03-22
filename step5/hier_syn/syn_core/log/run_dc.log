@@ -1,0 +1,1098 @@
+dc_shell> source run_dc.tcl
+Information: Variable 'hdlin_enable_vpp' is obsolete and is being ignored. (INFO-100)
+Running PRESTO HDLC
+Compiling source file ../../netlists/fifo_mux_2_1.v
+Presto compilation completed successfully.
+Loading db file '/home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db'
+Running PRESTO HDLC
+Compiling source file ../../netlists/fifo_mux_8_1.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../netlists/fifo_mux_16_1.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../netlists/fifo_depth16.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../netlists/ofifo.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../netlists/core.v
+Presto compilation completed successfully.
+Warning: Detected use of obsolete/unsupported feature.  The following
+        will not be available in a future release of the application:
+        elaborate -update. Use plain elaborate instead (CMD-100)
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/gtech.db'
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/standard.sldb'
+  Loading link library 'tcbn65gpluswc'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+        in routine core line 157 in file
+                '../../netlists/core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|    pmem_wr_q_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    pmem_rd_q_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    pmem_in_q_reg    | Flip-flop |  160  |  Y  | N  | N  | N  | N  | N  | N  |
+|   sfp_wr_add_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out_q_reg      | Flip-flop |  160  |  Y  | N  | N  | N  | N  | N  | N  |
+|     rd_en_q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wr_en_q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    sum_out_q_reg    | Flip-flop |  24   |  Y  | N  | N  | N  | N  | N  | N  |
+|    rd_en_q_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   rd_pending_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|    sfp_wr_q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    sfp_out_q_reg    | Flip-flop |  160  |  Y  | N  | N  | N  | N  | N  | N  |
+|    pmem_rd_d_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'core'.
+Warning: Cannot find the design 'mac_array' in the library 'WORK'. (LBR-1)
+Information: Building the design 'mac_array' instantiated from design 'core' with
+        the parameters "bw=8,bw_psum=20,col=8,pr=16". (HDL-193)
+Warning: Cannot find the design 'mac_array' in the library 'WORK'. (LBR-1)
+Information: Building the design 'ofifo' instantiated from design 'core' with
+        the parameters "bw=20,col=8". (HDL-193)
+Presto compilation completed successfully.
+Warning: Cannot find the design 'sram_w16' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_w16' instantiated from design 'core' with
+        the parameters "sram_bit=128". (HDL-193)
+Warning: Cannot find the design 'sram_w16' in the library 'WORK'. (LBR-1)
+Warning: Cannot find the design 'sram_2ports' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_2ports' instantiated from design 'core' with
+        the parameters "sram_bit=160". (HDL-193)
+Warning: Cannot find the design 'sram_2ports' in the library 'WORK'. (LBR-1)
+Warning: Cannot find the design 'sfp_row' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sfp_row' instantiated from design 'core' with
+        the parameters "col=8,bw=8,bw_psum=20". (HDL-193)
+Warning: Cannot find the design 'sfp_row' in the library 'WORK'. (LBR-1)
+Information: Building the design 'fifo_depth16' instantiated from design 'ofifo_col8_bw20' with
+        the parameters "bw=20,simd=1". (HDL-193)
+
+Inferred memory devices in process
+        in routine fifo_depth16_bw20_simd1 line 65 in file
+                '../../netlists/fifo_depth16.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     out_reg_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_depth16_bw20_simd1 line 78 in file
+                '../../netlists/fifo_depth16.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rd_ptr_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_depth16_bw20_simd1 line 88 in file
+                '../../netlists/fifo_depth16.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  320  |  Y  | N  | N  | N  | N  | N  | N  |
+|     wr_ptr_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fifo_mux_16_1' instantiated from design 'fifo_depth16_bw20_simd1' with
+        the parameters "bw=20,simd=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fifo_mux_8_1' instantiated from design 'fifo_mux_16_1_bw20_simd1' with
+        the parameters "bw=20,simd=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fifo_mux_2_1' instantiated from design 'fifo_mux_16_1_bw20_simd1' with
+        the parameters "bw=20,simd=1". (HDL-193)
+Presto compilation completed successfully.
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Current design is 'core'.
+
+  Linking design 'core'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (6 designs)               /home/linux/ieng6/oce/7f/jil547/Desktop/step5/hier_syn/syn_core/core.db, etc
+  tcbn65gpluswc (library)     /home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db
+
+Information: Building the design 'mac_array' instantiated from design 'core' with
+        the parameters "bw=8,bw_psum=20,col=8,pr=16". (HDL-193)
+Warning: Cannot find the design 'mac_array' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_w16' instantiated from design 'core' with
+        the parameters "sram_bit=128". (HDL-193)
+Warning: Cannot find the design 'sram_w16' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_2ports' instantiated from design 'core' with
+        the parameters "sram_bit=160". (HDL-193)
+Warning: Cannot find the design 'sram_2ports' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sfp_row' instantiated from design 'core' with
+        the parameters "col=8,bw=8,bw_psum=20". (HDL-193)
+Warning: Cannot find the design 'sfp_row' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'mac_array' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_w16' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_2ports' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sfp_row' in 'core'. (LINK-5)
+
+Reading SDC version 2.0...
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+#   Propagate Constraints from cell ofifo_inst/ (ofifo_col8_bw20) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/ (fifo_depth16_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/ (fifo_mux_16_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1b/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1a/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[7].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/ (fifo_depth16_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/ (fifo_mux_16_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1b/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1a/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[6].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/ (fifo_depth16_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/ (fifo_mux_16_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1b/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1a/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[5].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/ (fifo_depth16_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/ (fifo_mux_16_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1b/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1a/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[4].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/ (fifo_depth16_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/ (fifo_mux_16_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1b/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1a/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[3].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/ (fifo_depth16_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/ (fifo_mux_16_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1b/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1a/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[2].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/ (fifo_depth16_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/ (fifo_mux_16_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1b/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1a/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[1].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/ (fifo_depth16_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/ (fifo_mux_16_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1b/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1b/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1a/ (fifo_mux_8_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1g/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1f/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1e/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1d/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1c/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1b/ (fifo_mux_2_1_bw20_simd1) #
+
+#   Propagate Constraints from cell ofifo_inst/col_idx[0].fifo_instance/fifo_mux_16_1a/mux_8_1a/fifo_mux_2_1a/ (fifo_mux_2_1_bw20_simd1) #
+Current design is 'core'.
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Current design is 'core'.
+Current design is 'ofifo_col8_bw20'.
+Current design is 'fifo_depth16_bw20_simd1'.
+Current design is 'fifo_mux_16_1_bw20_simd1'.
+Current design is 'fifo_mux_8_1_bw20_simd1'.
+Current design is 'fifo_mux_2_1_bw20_simd1'.
+Current design is 'core'.
+Information: Building the design 'mac_array' instantiated from design 'core' with
+        the parameters "bw=8,bw_psum=20,col=8,pr=16". (HDL-193)
+Warning: Cannot find the design 'mac_array' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_w16' instantiated from design 'core' with
+        the parameters "sram_bit=128". (HDL-193)
+Warning: Cannot find the design 'sram_w16' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_2ports' instantiated from design 'core' with
+        the parameters "sram_bit=160". (HDL-193)
+Warning: Cannot find the design 'sram_2ports' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sfp_row' instantiated from design 'core' with
+        the parameters "col=8,bw=8,bw_psum=20". (HDL-193)
+Warning: Cannot find the design 'sfp_row' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'mac_array' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_w16' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_2ports' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sfp_row' in 'core'. (LINK-5)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.2 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.2 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 646 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 8 instances of design 'fifo_depth16_bw20_simd1'. (OPT-1056)
+Information: Uniquified 8 instances of design 'fifo_mux_16_1_bw20_simd1'. (OPT-1056)
+Information: Uniquified 16 instances of design 'fifo_mux_8_1_bw20_simd1'. (OPT-1056)
+Information: Uniquified 120 instances of design 'fifo_mux_2_1_bw20_simd1'. (OPT-1056)
+  Simplifying Design 'core'
+
+Information: Building the design 'mac_array' instantiated from design 'core' with
+        the parameters "bw=8,bw_psum=20,col=8,pr=16". (HDL-193)
+Warning: Cannot find the design 'mac_array' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_w16' instantiated from design 'core' with
+        the parameters "sram_bit=128". (HDL-193)
+Warning: Cannot find the design 'sram_w16' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_2ports' instantiated from design 'core' with
+        the parameters "sram_bit=160". (HDL-193)
+Warning: Cannot find the design 'sram_2ports' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sfp_row' instantiated from design 'core' with
+        the parameters "col=8,bw=8,bw_psum=20". (HDL-193)
+Warning: Cannot find the design 'sfp_row' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'mac_array' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_w16' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_2ports' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sfp_row' in 'core'. (LINK-5)
+Loaded alib file './alib-52/tcbn65gpluswc.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'core'
+Information: Added key list 'DesignWare' to design 'core'. (DDB-72)
+  Processing 'fifo_depth16_bw20_simd1_7'
+Information: Added key list 'DesignWare' to design 'fifo_depth16_bw20_simd1_7'. (DDB-72)
+ Implement Synthetic for 'fifo_depth16_bw20_simd1_7'.
+  Processing 'fifo_mux_16_1_bw20_simd1_7'
+  Processing 'ofifo_col8_bw20'
+  Processing 'fifo_mux_2_1_bw20_simd1_112'
+  Processing 'fifo_depth16_bw20_simd1_0'
+Information: Added key list 'DesignWare' to design 'fifo_depth16_bw20_simd1_0'. (DDB-72)
+ Implement Synthetic for 'fifo_depth16_bw20_simd1_0'.
+  Processing 'fifo_mux_16_1_bw20_simd1_0'
+  Processing 'fifo_mux_8_1_bw20_simd1_0'
+Information: Building the design 'mac_array' instantiated from design 'core' with
+        the parameters "bw=8,bw_psum=20,col=8,pr=16". (HDL-193)
+Warning: Cannot find the design 'mac_array' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_w16' instantiated from design 'core' with
+        the parameters "sram_bit=128". (HDL-193)
+Warning: Cannot find the design 'sram_w16' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_2ports' instantiated from design 'core' with
+        the parameters "sram_bit=160". (HDL-193)
+Warning: Cannot find the design 'sram_2ports' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sfp_row' instantiated from design 'core' with
+        the parameters "col=8,bw=8,bw_psum=20". (HDL-193)
+Warning: Cannot find the design 'sfp_row' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'mac_array' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_w16' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_2ports' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sfp_row' in 'core'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIEL' in the library 'tcbn65gpluswc' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEH' in the library 'tcbn65gpluswc' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:03:41   41693.0      0.04       5.7       0.0                           291175.5312
+    0:03:42   41742.0      0.00       0.0       0.0                           294467.7188
+    0:03:42   41742.0      0.00       0.0       0.0                           294467.7188
+    0:03:45   41726.5      0.00       0.0       0.0                           294769.8438
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:03:56   41663.2      0.00       0.0       0.0                           292216.1875
+    0:03:58   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:03:59   41637.2      0.00       0.0       0.0                           286785.2812
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+    0:04:07   41271.8      0.17     350.9       0.0                           278187.7500
+    0:04:26   42250.0      0.00       0.0       0.2                           290660.7500
+    0:04:26   42250.0      0.00       0.0       0.2                           290660.7500
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:28   41856.5      0.00       0.0       0.2                           279719.8125
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:04:29   41856.5      0.00       0.0       0.2                           279719.8125
+    0:04:30   41684.8      0.00       0.0       0.2                           276206.4688
+    0:04:31   41693.4      0.00       0.0       0.2                           276388.6875
+    0:04:31   41693.4      0.00       0.0       0.2                           276388.6875
+    0:04:32   41686.2      0.00       0.0       0.2                           275470.5625
+    0:04:33   41588.3      0.00       0.0       0.0                           274672.8750
+    0:04:33   41588.3      0.00       0.0       0.0                           274672.8750
+    0:04:33   41588.3      0.00       0.0       0.0                           274672.8750
+    0:04:33   41588.3      0.00       0.0       0.0                           274672.8750
+    0:04:34   41474.5      0.00       0.0       0.0                           272675.1875
+Loading db file '/home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'ofifo_inst/col_idx[2].fifo_instance/wr_clk': 3322 load(s), 1 driver(s), 5 inout(s)
+Information: Building the design 'mac_array' instantiated from design 'core' with
+        the parameters "bw=8,bw_psum=20,col=8,pr=16". (HDL-193)
+Warning: Cannot find the design 'mac_array' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_w16' instantiated from design 'core' with
+        the parameters "sram_bit=128". (HDL-193)
+Warning: Cannot find the design 'sram_w16' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_2ports' instantiated from design 'core' with
+        the parameters "sram_bit=160". (HDL-193)
+Warning: Cannot find the design 'sram_2ports' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sfp_row' instantiated from design 'core' with
+        the parameters "col=8,bw=8,bw_psum=20". (HDL-193)
+Warning: Cannot find the design 'sfp_row' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'mac_array' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_w16' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_2ports' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sfp_row' in 'core'. (LINK-5)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+Current design is 'core'.
+Information: Building the design 'mac_array' instantiated from design 'core' with
+        the parameters "bw=8,bw_psum=20,col=8,pr=16". (HDL-193)
+Warning: Cannot find the design 'mac_array' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_w16' instantiated from design 'core' with
+        the parameters "sram_bit=128". (HDL-193)
+Warning: Cannot find the design 'sram_w16' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sram_2ports' instantiated from design 'core' with
+        the parameters "sram_bit=160". (HDL-193)
+Warning: Cannot find the design 'sram_2ports' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sfp_row' instantiated from design 'core' with
+        the parameters "col=8,bw=8,bw_psum=20". (HDL-193)
+Warning: Cannot find the design 'sfp_row' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'mac_array' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_w16' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sram_2ports' in 'core'. (LINK-5)
+Warning: Unable to resolve reference 'sfp_row' in 'core'. (LINK-5)
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/home/linux/ieng6/oce/7f/jil547/Desktop/step5/hier_syn/syn_core/core.out.v'.
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+run.scr completed successfully
+dc_shell> exit
+
+Thank you...
+

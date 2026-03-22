@@ -1,0 +1,23 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++v2k
++notimingchecks
+-MESSAGES
++EMGRLOG
+run_syn_gate.log
+-XLSTIME
+1773920252
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx86.20.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx86.20.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx86.20.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun	20.09-s017"

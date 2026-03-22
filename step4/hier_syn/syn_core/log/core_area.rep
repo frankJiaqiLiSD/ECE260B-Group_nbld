@@ -1,0 +1,95 @@
+Warning: Design 'core' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : core
+Version: K-2015.06-SP2
+Date   : Thu Mar 19 05:13:49 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db)
+
+Number of ports:                        18856
+Number of nets:                         62502
+Number of cells:                        37557
+Number of combinational cells:          29260
+Number of sequential cells:              8127
+Number of macros/black boxes:               0
+Number of buf/inv:                       3141
+Number of references:                      19
+
+Combinational area:             109566.360783
+Buf/Inv area:                     3422.160136
+Noncombinational area:           55793.161225
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                165359.522008
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
+Warning: Design 'core' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : reference
+Design : core
+Version: K-2015.06-SP2
+Date   : Thu Mar 19 05:13:51 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22D0             tcbn65gpluswc
+                                  2.880000       5     14.400001  
+AOI22D0            tcbn65gpluswc
+                                  2.520000       1      2.520000  
+AOI221D0           tcbn65gpluswc
+                                  2.880000       1      2.880000  
+CKND2D0            tcbn65gpluswc
+                                  1.440000       1      1.440000  
+DFD1               tcbn65gpluswc
+                                  7.200000       1      7.200000  n
+DFQD1              tcbn65gpluswc
+                                  6.840000       3     20.520000  n
+INVD0              tcbn65gpluswc
+                                  1.080000      12     12.960001  
+IOA21D0            tcbn65gpluswc
+                                  2.520000       1      2.520000  
+MUX2D0             tcbn65gpluswc
+                                  3.240000     129    417.960001  
+ND3D0              tcbn65gpluswc
+                                  2.160000       1      2.160000  
+NR2D0              tcbn65gpluswc
+                                  1.440000       2      2.880000  
+NR3D0              tcbn65gpluswc
+                                  2.160000       1      2.160000  
+OAI31D0            tcbn65gpluswc
+                                  2.520000       1      2.520000  
+OR2D0              tcbn65gpluswc
+                                  2.160000       3      6.480000  
+mac_array_col8_bw8_bw_psum20_pr16
+                              130439.161269
+                                                 1  130439.161269 h, n
+ofifo_col8_bw20               34421.760735       1  34421.760735  h, n
+sfp_row                           0.000000       1      0.000000  b
+sram_2ports                       0.000000       1      0.000000  b
+sram_w16                          0.000000       2      0.000000  b
+-----------------------------------------------------------------------------
+Total 19 references                                 165359.522008
+1

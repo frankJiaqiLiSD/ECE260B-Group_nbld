@@ -1,0 +1,103 @@
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : core
+Version: K-2015.06-SP2
+Date   : Sat Mar 21 15:44:20 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db)
+
+Number of ports:                        14068
+Number of nets:                         24639
+Number of cells:                        10136
+Number of combinational cells:           6656
+Number of sequential cells:              3327
+Number of macros/black boxes:               0
+Number of buf/inv:                        384
+Number of references:                      24
+
+Combinational area:              18365.040404
+Buf/Inv area:                      543.240021
+Noncombinational area:           23109.480482
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 41474.520886
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
+Warning: Design 'core' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : reference
+Design : core
+Version: K-2015.06-SP2
+Date   : Sat Mar 21 15:44:21 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22D0             tcbn65gpluswc
+                                  2.880000     132    380.160015  
+AOI31D0            tcbn65gpluswc
+                                  2.520000       1      2.520000  
+AOI32D0            tcbn65gpluswc
+                                  2.880000       1      2.880000  
+AOI221D0           tcbn65gpluswc
+                                  2.880000       2      5.760000  
+CKAN2D0            tcbn65gpluswc
+                                  2.160000     350    756.000030  
+CKND2D0            tcbn65gpluswc
+                                  1.440000       1      1.440000  
+DFD1               tcbn65gpluswc
+                                  7.200000       1      7.200000  n
+DFQD1              tcbn65gpluswc
+                                  6.840000     521   3563.640079  n
+INR2D0             tcbn65gpluswc
+                                  2.160000     167    360.720014  
+INVD0              tcbn65gpluswc
+                                  1.080000      11     11.880000  
+INVD1              tcbn65gpluswc
+                                  1.080000       3      3.240000  
+INVD2              tcbn65gpluswc
+                                  1.440000       2      2.880000  
+INVD4              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+INVD6              tcbn65gpluswc
+                                  3.240000       1      3.240000  
+MAOI22D0           tcbn65gpluswc
+                                  2.880000       1      2.880000  
+ND4D0              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+OAI31D0            tcbn65gpluswc
+                                  2.520000       1      2.520000  
+OR2D0              tcbn65gpluswc
+                                  2.160000       4      8.640000  
+OR3D0              tcbn65gpluswc
+                                  2.520000       1      2.520000  
+mac_array                         0.000000       1      0.000000  b
+ofifo_col8_bw20               36351.360746       1  36351.360746  h, n
+sfp_row                           0.000000       1      0.000000  b
+sram_2ports                       0.000000       1      0.000000  b
+sram_w16                          0.000000       2      0.000000  b
+-----------------------------------------------------------------------------
+Total 24 references                                 41474.520886
+1

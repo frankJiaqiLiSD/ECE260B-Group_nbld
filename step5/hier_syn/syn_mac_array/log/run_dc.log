@@ -1,0 +1,802 @@
+dc_shell> source run_dc.tcl
+Information: Variable 'hdlin_enable_vpp' is obsolete and is being ignored. (INFO-100)
+Running PRESTO HDLC
+Compiling source file ../../netlists/mac_16in.v
+Presto compilation completed successfully.
+Loading db file '/home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db'
+Running PRESTO HDLC
+Compiling source file ../../netlists/mac_col.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../netlists/mac_array.v
+Presto compilation completed successfully.
+Warning: Detected use of obsolete/unsupported feature.  The following
+        will not be available in a future release of the application:
+        elaborate -update. Use plain elaborate instead (CMD-100)
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/gtech.db'
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/standard.sldb'
+  Loading link library 'tcbn65gpluswc'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'mac_array'.
+Information: Building the design 'mac_col' instantiated from design 'mac_array' with
+        the parameters "bw=8,bw_psum=20,pr=16,col_id=1". (HDL-193)
+Warning:  ../../netlists/mac_col.v:82: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_col_bw8_bw_psum20_pr16_col_id1 line 49 in file
+                '../../netlists/mac_col.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_4q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_6q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_5q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_7q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      key_q_reg      | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     query_q_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     psum_q_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|      cnt_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  load_ready_q_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_q_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_2q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_3q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac_col' instantiated from design 'mac_array' with
+        the parameters "bw=8,bw_psum=20,pr=16,col_id=2". (HDL-193)
+Warning:  ../../netlists/mac_col.v:82: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_col_bw8_bw_psum20_pr16_col_id2 line 49 in file
+                '../../netlists/mac_col.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_4q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_6q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_5q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_7q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      key_q_reg      | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     query_q_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     psum_q_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|      cnt_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  load_ready_q_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_q_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_2q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_3q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac_col' instantiated from design 'mac_array' with
+        the parameters "bw=8,bw_psum=20,pr=16,col_id=3". (HDL-193)
+Warning:  ../../netlists/mac_col.v:82: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_col_bw8_bw_psum20_pr16_col_id3 line 49 in file
+                '../../netlists/mac_col.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_4q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_6q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_5q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_7q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      key_q_reg      | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     query_q_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     psum_q_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|      cnt_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  load_ready_q_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_q_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_2q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_3q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac_col' instantiated from design 'mac_array' with
+        the parameters "bw=8,bw_psum=20,pr=16,col_id=4". (HDL-193)
+Warning:  ../../netlists/mac_col.v:82: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_col_bw8_bw_psum20_pr16_col_id4 line 49 in file
+                '../../netlists/mac_col.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_4q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_6q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_5q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_7q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      key_q_reg      | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     query_q_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     psum_q_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|      cnt_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  load_ready_q_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_q_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_2q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_3q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac_col' instantiated from design 'mac_array' with
+        the parameters "bw=8,bw_psum=20,pr=16,col_id=5". (HDL-193)
+Warning:  ../../netlists/mac_col.v:82: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_col_bw8_bw_psum20_pr16_col_id5 line 49 in file
+                '../../netlists/mac_col.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_4q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_6q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_5q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_7q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      key_q_reg      | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     query_q_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     psum_q_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|      cnt_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  load_ready_q_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_q_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_2q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_3q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac_col' instantiated from design 'mac_array' with
+        the parameters "bw=8,bw_psum=20,pr=16,col_id=6". (HDL-193)
+Warning:  ../../netlists/mac_col.v:82: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_col_bw8_bw_psum20_pr16_col_id6 line 49 in file
+                '../../netlists/mac_col.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_4q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_6q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_5q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_7q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      key_q_reg      | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     query_q_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     psum_q_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|      cnt_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  load_ready_q_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_q_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_2q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_3q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac_col' instantiated from design 'mac_array' with
+        the parameters "bw=8,bw_psum=20,pr=16,col_id=7". (HDL-193)
+Warning:  ../../netlists/mac_col.v:82: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_col_bw8_bw_psum20_pr16_col_id7 line 49 in file
+                '../../netlists/mac_col.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_4q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_6q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_5q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_7q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      key_q_reg      | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     query_q_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     psum_q_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|      cnt_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  load_ready_q_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_q_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_2q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_3q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac_col' instantiated from design 'mac_array' with
+        the parameters "bw=8,bw_psum=20,pr=16,col_id=8". (HDL-193)
+Warning:  ../../netlists/mac_col.v:82: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_col_bw8_bw_psum20_pr16_col_id8 line 49 in file
+                '../../netlists/mac_col.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     inst_4q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_6q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_5q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_7q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      key_q_reg      | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     query_q_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|     psum_q_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|      cnt_q_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  load_ready_q_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_q_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_2q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inst_3q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mac_16in' instantiated from design 'mac_col_bw8_bw_psum20_pr16_col_id1' with
+        the parameters "bw=8,bw_psum=20,pr=16". (HDL-193)
+Warning:  ../../netlists/mac_16in.v:102: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:148: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:149: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:150: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:151: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:152: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:153: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:154: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:155: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:165: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:167: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:169: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../../netlists/mac_16in.v:171: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine mac_16in_bw8_bw_psum20_pr16 line 104 in file
+                '../../netlists/mac_16in.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  product3_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    out0_reg_reg     | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|    out1_reg_reg     | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|    psum2_reg_reg    | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|    psum3_reg_reg    | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|    psum0_reg_reg    | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|    psum1_reg_reg    | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|  product6_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  product7_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  product4_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  product5_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  final_out_reg_reg  | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|  product0_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  product1_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  product2_reg_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is 'mac_array'.
+
+  Linking design 'mac_array'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (10 designs)              /home/linux/ieng6/oce/7f/jil547/Desktop/step5/hier_syn/syn_mac_array/mac_array.db, etc
+  tcbn65gpluswc (library)     /home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db
+
+
+Reading SDC version 2.0...
+Error: Invalid delay direction for port 'out[159]'. (UID-254)
+Error: Invalid delay direction for port 'in[127]'. (UID-254)
+
+#   Propagate Constraints from cell col_idx[8].mac_col_inst/ (mac_col_bw8_bw_psum20_pr16_col_id8) #
+
+#   Propagate Constraints from cell col_idx[8].mac_col_inst/mac_16in_instance/ (mac_16in_bw8_bw_psum20_pr16) #
+
+#   Propagate Constraints from cell col_idx[7].mac_col_inst/ (mac_col_bw8_bw_psum20_pr16_col_id7) #
+
+#   Propagate Constraints from cell col_idx[7].mac_col_inst/mac_16in_instance/ (mac_16in_bw8_bw_psum20_pr16) #
+
+#   Propagate Constraints from cell col_idx[6].mac_col_inst/ (mac_col_bw8_bw_psum20_pr16_col_id6) #
+
+#   Propagate Constraints from cell col_idx[6].mac_col_inst/mac_16in_instance/ (mac_16in_bw8_bw_psum20_pr16) #
+
+#   Propagate Constraints from cell col_idx[5].mac_col_inst/ (mac_col_bw8_bw_psum20_pr16_col_id5) #
+
+#   Propagate Constraints from cell col_idx[5].mac_col_inst/mac_16in_instance/ (mac_16in_bw8_bw_psum20_pr16) #
+
+#   Propagate Constraints from cell col_idx[4].mac_col_inst/ (mac_col_bw8_bw_psum20_pr16_col_id4) #
+
+#   Propagate Constraints from cell col_idx[4].mac_col_inst/mac_16in_instance/ (mac_16in_bw8_bw_psum20_pr16) #
+
+#   Propagate Constraints from cell col_idx[3].mac_col_inst/ (mac_col_bw8_bw_psum20_pr16_col_id3) #
+
+#   Propagate Constraints from cell col_idx[3].mac_col_inst/mac_16in_instance/ (mac_16in_bw8_bw_psum20_pr16) #
+
+#   Propagate Constraints from cell col_idx[2].mac_col_inst/ (mac_col_bw8_bw_psum20_pr16_col_id2) #
+
+#   Propagate Constraints from cell col_idx[2].mac_col_inst/mac_16in_instance/ (mac_16in_bw8_bw_psum20_pr16) #
+
+#   Propagate Constraints from cell col_idx[1].mac_col_inst/ (mac_col_bw8_bw_psum20_pr16_col_id1) #
+
+#   Propagate Constraints from cell col_idx[1].mac_col_inst/mac_16in_instance/ (mac_16in_bw8_bw_psum20_pr16) #
+Current design is 'mac_array'.
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Current design is 'mac_array'.
+Current design is 'mac_col_bw8_bw_psum20_pr16_col_id1'.
+Current design is 'mac_col_bw8_bw_psum20_pr16_col_id2'.
+Current design is 'mac_col_bw8_bw_psum20_pr16_col_id3'.
+Current design is 'mac_col_bw8_bw_psum20_pr16_col_id4'.
+Current design is 'mac_col_bw8_bw_psum20_pr16_col_id5'.
+Current design is 'mac_col_bw8_bw_psum20_pr16_col_id6'.
+Current design is 'mac_col_bw8_bw_psum20_pr16_col_id7'.
+Current design is 'mac_col_bw8_bw_psum20_pr16_col_id8'.
+Current design is 'mac_16in_bw8_bw_psum20_pr16'.
+Current design is 'mac_array'.
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Loading db file '/software/nonrdist64/dc-2015.06-64/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.2 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.2 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 267 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 8 instances of design 'mac_16in_bw8_bw_psum20_pr16'. (OPT-1056)
+  Simplifying Design 'mac_array'
+
+Loaded alib file './alib-52/tcbn65gpluswc.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mac_16in_bw8_bw_psum20_pr16_0'
+ Implement Synthetic for 'mac_16in_bw8_bw_psum20_pr16_0'.
+  Processing 'mac_col_bw8_bw_psum20_pr16_col_id8'
+Information: Added key list 'DesignWare' to design 'mac_col_bw8_bw_psum20_pr16_col_id8'. (DDB-72)
+  Processing 'mac_col_bw8_bw_psum20_pr16_col_id7'
+Information: Added key list 'DesignWare' to design 'mac_col_bw8_bw_psum20_pr16_col_id7'. (DDB-72)
+  Processing 'mac_col_bw8_bw_psum20_pr16_col_id3'
+Information: Added key list 'DesignWare' to design 'mac_col_bw8_bw_psum20_pr16_col_id3'. (DDB-72)
+  Processing 'mac_col_bw8_bw_psum20_pr16_col_id6'
+Information: Added key list 'DesignWare' to design 'mac_col_bw8_bw_psum20_pr16_col_id6'. (DDB-72)
+  Processing 'mac_col_bw8_bw_psum20_pr16_col_id2'
+Information: Added key list 'DesignWare' to design 'mac_col_bw8_bw_psum20_pr16_col_id2'. (DDB-72)
+  Processing 'mac_col_bw8_bw_psum20_pr16_col_id5'
+Information: Added key list 'DesignWare' to design 'mac_col_bw8_bw_psum20_pr16_col_id5'. (DDB-72)
+  Processing 'mac_col_bw8_bw_psum20_pr16_col_id1'
+Information: Added key list 'DesignWare' to design 'mac_col_bw8_bw_psum20_pr16_col_id1'. (DDB-72)
+  Processing 'mac_col_bw8_bw_psum20_pr16_col_id4'
+Information: Added key list 'DesignWare' to design 'mac_col_bw8_bw_psum20_pr16_col_id4'. (DDB-72)
+  Processing 'mac_array'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIEL' in the library 'tcbn65gpluswc' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEH' in the library 'tcbn65gpluswc' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+Information: Added key list 'DesignWare' to design 'mac_16in_bw8_bw_psum20_pr16_7'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'mac_16in_bw8_bw_psum20_pr16_6'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'mac_16in_bw8_bw_psum20_pr16_5'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'mac_16in_bw8_bw_psum20_pr16_4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'mac_16in_bw8_bw_psum20_pr16_3'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'mac_16in_bw8_bw_psum20_pr16_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'mac_16in_bw8_bw_psum20_pr16_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'mac_16in_bw8_bw_psum20_pr16_0'. (DDB-72)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'mac_16in_bw8_bw_psum20_pr16_5_DW02_mult_8'
+  Mapping 'mac_16in_bw8_bw_psum20_pr16_4_DW02_mult_8'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:06   84494.9      0.18      54.9       0.7                           796299.1875
+    0:01:41   89369.3      0.00       0.0       0.6                           895791.5000
+    0:01:41   89369.3      0.00       0.0       0.6                           895791.5000
+    0:01:42   89369.6      0.00       0.0       0.6                           895778.6875
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:53   88511.8      0.07       0.4       0.5                           877386.5000
+    0:01:58   87864.8      0.00       0.1       0.1                           868986.7500
+    0:01:58   87907.3      0.00       0.0       0.1                           870353.0625
+    0:02:04   86898.2      0.00       0.2       0.0                           719272.8750
+    0:02:04   86898.2      0.00       0.2       0.0                           719272.8750
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:17   87694.6      0.00       0.0       0.0                           727855.0625
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+    0:02:39   87154.6      0.00       0.0       0.0                           706660.7500
+    0:02:39   87154.6      0.00       0.0       0.0                           706660.7500
+    0:02:39   87154.6      0.00       0.0       0.0                           706660.7500
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+    0:02:42   86911.9      0.00       0.0       0.0                           698795.6250
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:42   86359.0      0.00       0.0       0.0                           698648.1875
+    0:02:47   85853.2      0.00       0.0       0.0                           683536.3125
+    0:02:47   85862.5      0.00       0.0       0.0                           683977.0625
+    0:02:47   85862.5      0.00       0.0       0.0                           683977.0625
+    0:02:50   85619.2      0.00       0.0       0.0                           678229.0000
+    0:02:53   85543.9      0.00       0.0       0.0                           676871.3125
+    0:02:53   85533.8      0.00       0.0       0.0                           676263.1250
+    0:02:53   85533.8      0.00       0.0       0.0                           676263.1250
+    0:02:53   85533.8      0.00       0.0       0.0                           676263.1250
+    0:02:53   85533.8      0.00       0.0       0.0                           676263.1250
+    0:02:58   85298.8      0.00       0.0       0.0                           670630.6875
+Loading db file '/home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'mac_array' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'col_idx[2].mac_col_inst/mac_16in_instance/clk': 3431 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Current design is 'mac_array'.
+Writing verilog file '/home/linux/ieng6/oce/7f/jil547/Desktop/step5/hier_syn/syn_mac_array/mac_array.out.v'.
+run.scr completed successfully
+dc_shell> exit
+
+Thank you...
+

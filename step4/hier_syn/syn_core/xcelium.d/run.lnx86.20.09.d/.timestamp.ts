@@ -1,0 +1,14 @@
+1773919691 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/hier_syn/syn_sfp_row/sfp_row.out.v
+1773898130 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/netlists/fifo_mux_8_1.v
+1773898130 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/netlists/fifo_mux_16_1.v
+1773925832 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/netlists/fifo_depth16.v
+1773898130 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/netlists/sfp_row.v
+1773925496 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/hier_syn/syn_core/tsmc_dff_behav.v
+1773925748 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/hier_syn/syn_core/pdk_no_udp_dff.v
+1773898130 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/netlists/sram_2ports.v
+1773898130 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/netlists/ofifo.v
+1773922429 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/hier_syn/syn_core/core.out.v
+1737007846 /home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/verilog/tcbn65gplus.v
+1773898130 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/netlists/fifo_mux_2_1.v
+1773898130 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/netlists/sram_w16.v
+1773923488 /home/linux/ieng6/oce/7f/jil547/Desktop/step4/step4_syn/hier_syn/syn_core/core_syn_tb.v
