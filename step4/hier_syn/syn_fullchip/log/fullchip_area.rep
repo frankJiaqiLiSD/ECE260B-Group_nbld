@@ -1,0 +1,61 @@
+Warning: Design 'fullchip' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : fullchip
+Version: K-2015.06-SP2
+Date   : Thu Mar 19 07:45:40 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/db/tcbn65gpluswc.db)
+
+Number of ports:                         4850
+Number of nets:                          6824
+Number of cells:                         1977
+Number of combinational cells:           1076
+Number of sequential cells:               854
+Number of macros/black boxes:               0
+Number of buf/inv:                         42
+Number of references:                       2
+
+Combinational area:               3120.480032
+Buf/Inv area:                       45.360002
+Noncombinational area:            7572.959785
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 10693.439818
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
+Warning: Design 'fullchip' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : reference
+Design : fullchip
+Version: K-2015.06-SP2
+Date   : Thu Mar 19 07:45:41 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+core                              0.000000       2      0.000000  b
+transceiver                   10693.439818       1  10693.439818  h, n
+-----------------------------------------------------------------------------
+Total 2 references                                  10693.439818
+1

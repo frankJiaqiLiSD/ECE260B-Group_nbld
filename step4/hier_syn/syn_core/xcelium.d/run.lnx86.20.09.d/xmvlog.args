@@ -1,0 +1,28 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.20.09.d
+-RUNMODE
+/home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/verilog/tcbn65gplus.v
+core.out.v
+../../netlists/sfp_row.v
+../../netlists/fifo_mux_2_1.v
+../../netlists/fifo_mux_8_1.v
+../../netlists/fifo_mux_16_1.v
+../../netlists/fifo_depth16.v
+../../netlists/ofifo.v
+../../netlists/sram_w16.v
+../../netlists/sram_2ports.v
+core_syn_tb.v
+-CDSLIB
+./xcelium.d/run.lnx86.20.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.20.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx86.20.09.d/xllibs
+-ALLOWUNBOUND
+-hastop

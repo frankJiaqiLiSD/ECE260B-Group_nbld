@@ -1,0 +1,24 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++v2k
++notimingchecks
+-timescale
+1ns/1ps
+-ACCESS
++rwc
+-NOTIMINGCHECKS
+-MESSAGES
+sfp_row_syn_tb
+-XLMODE
+./xcelium.d/run.lnx86.20.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx86.20.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx86.20.09.d/hdl.var
+-WORK
+worklib
+-IRUNHASTOP
+-HASXLMODE

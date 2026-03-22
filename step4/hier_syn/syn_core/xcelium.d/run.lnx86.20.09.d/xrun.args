@@ -1,0 +1,27 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++v2k
++xmtimescale+1ns/1ps
++xmoveride_timescale
+-access
++rwc
++notimingchecks
+-xminitialize
+0
+/home/linux/ieng6/ECE260B_WI26_A00/public/PDKdata/verilog/tcbn65gplus.v
+core.out.v
+../../netlists/sfp_row.v
+../../netlists/fifo_mux_2_1.v
+../../netlists/fifo_mux_8_1.v
+../../netlists/fifo_mux_16_1.v
+../../netlists/fifo_depth16.v
+../../netlists/ofifo.v
+../../netlists/sram_w16.v
+../../netlists/sram_2ports.v
+core_syn_tb.v
+-top
+core_syn_tb
+-l
+run_core_gate.log
